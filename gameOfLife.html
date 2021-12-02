@@ -10,7 +10,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="assets/css/gameOfLife.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>        
+        <script src="assets/js/gameOfLife.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -47,26 +49,52 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>Basic JS Projects</h1>
+										<h1>Game Of Life</h1>
 									</header>
 									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-									<p><strong>JS projects compilation that i have found interesting or useful</strong></p>
+									<p><strong>The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.</strong></p>
+                                    <ul class="actions">
+                                        <li><a href="#rules" class="button small ">Primary</a></li>
+                                        <li><a href="#game" class="button small primary">Default</a></li>
+                                    </ul>
 								</div>
 							</section>
 
 						<!-- two -->
 
-							<section id="two">
+							<section id="rules">
 								<div class="inner">								
-									<h4>Game of life</h4>
-									<p>The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, live or dead, (or populated and unpopulated, respectively). Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent.</p>
-									<ul class="actions">									
-										<li><a href="gameOfLife.html" class="button">Go to Demo</a></li>
-									</ul>
+									<h4>Rules</h4>
+									<p>At each step in time, the following transitions occur:</p>
+									<ol>
+                                        <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+                                        <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+                                        <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+                                        <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+                                    </ol>
+                                    <p>These rules, which compare the behavior of the automaton to real life, can be condensed into the following:</p>
+                                    <ol>
+                                        <li>Any live cell with two or three live neighbours survives.</li>
+                                        <li>Any dead cell with three live neighbours becomes a live cell.</li>
+                                        <li>All other live cells die in the next generation. Similarly, all other dead cells stay dead.</li>
+                                    </ol>
+                                    <p>The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed, live or dead; births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick. Each generation is a pure function of the preceding one. The rules continue to be applied repeatedly to create further generations.</p>
 								</div>	
 								
 							</section>
-							
+
+                        <!-- two -->
+
+                        <section id="game">
+                            <div class="inner">								
+                                <h4>Demo</h4>
+                                <ul class="actions">
+                                    <li><a onclick="init()" class="button small ">Start</a></li>
+                                </ul>
+                                <table id="field" class="field"></table>
+                            </div>	
+                            
+                        </section>
 
 					</div>
 
@@ -146,6 +174,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>

@@ -1,0 +1,17 @@
+.field{
+border: 1px solid black;
+}
+
+.cell{
+    width: 1px;
+    height: 1px;
+    border: 0.125px;
+}
+
+.filled{
+    background-color: black;
+}
+
+.empty{
+    background-color: white;
+}
