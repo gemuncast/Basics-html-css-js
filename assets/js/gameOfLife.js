@@ -1,4 +1,4 @@
-var size = 20;
+var size = 200;
 var htmlElements;
 var cells;
 var EMPTY = 0;
@@ -78,4 +78,15 @@ draw();
 setInterval(newGeneration, 100);
 }
 
-init();
+
+function startDemo(){
+    if(document.getElementById("btnDemo").innerHTML == 'Start'){
+        document.getElementById("btnDemo").innerHTML = 'Stop'
+        init();
+    }
+    else{
+        document.getElementById("btnDemo").innerHTML = 'Start';
+        document.getElementById('field').innerHTML = "";
+    }
+}
+
