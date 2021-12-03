@@ -1,4 +1,4 @@
-var size = 200;
+var size = 20;
 var htmlElements;
 var cells;
 var EMPTY = 0;
