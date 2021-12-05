@@ -13,8 +13,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
         <link rel="stylesheet" href="assets/css/weather.css" />
-        <script src="assets/js/weather.js"></script>
-
+		
 	</head>
 	<body class="is-preload">
 
@@ -35,13 +34,8 @@
 						<li><a href="index.html">Home</a></li>
 						<li><a href="htmlCss.html">HTML + CSS</a></li>
 						<li><a href="js.html">JS</a></li>
-						<!-- <li><a href="reactNode.html">React & React</a></li> -->
 						<li><a href="#contact">Contact</a></li>
 					</ul>
-					<!-- <ul class="actions stacked">
-						<li><a href="#" class="button primary fit">Get Started</a></li>
-						<li><a href="#" class="button fit">Log In</a></li>
-					</ul> -->
 				</nav>
 
 				<!-- Main -->
@@ -57,7 +51,7 @@
 									<p><strong>Weather app to check how is the weather in a desired zone</strong></p>
                                     <ul class="actions">
                                         <li><a href="#rules" class="button small ">Rules</a></li>
-                                        <li><a href="#game" class="button small primary">Demo</a></li>
+                                        <li><a href="#weatherApp" class="button small primary">Demo</a></li>
                                     </ul>
 								</div>
 							</section>
@@ -67,16 +61,36 @@
 							<section id="rules">
 								<div class="inner">								
 									<h4>Rules</h4>
-									<p>here they are...</p>
+									<p>insert a city in the input field, then click in "Check" to know how is the weather in your desired city</p>
 								</div>	
 								
 							</section>
 
                         <!-- two -->
 
-                        <section id="game">
-                            <div class="inner">								
-                                <h4>Demo</h4>                                
+                        <section id="weatherApp">
+                            <div class="inner">
+								<section>
+									<h2>How is the Weather?</h2>
+								<div>
+									<h3>Enter Your Location</h3>
+									<form method="post" action="#">
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall">
+												<input type="text" name="demo-city" id="city-input" value="" placeholder="City" />
+											</div>
+											<!-- Break -->
+											<div class="col-12">
+												<ul class="actions">
+													<li><a  id="btnDemo" class="button small" >Check</a></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div> 
+								</section>		
+								<section id="weatherInfo">
+								</section>                        
                             </div>	
                             
                         </section>
@@ -111,6 +125,7 @@
 								</div>
 							</section>
 						</section>
+
 						<section class="split">
 							<section>
 								<div class="contact-method">
@@ -159,5 +174,11 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			
+			<script src="assets/js/fetchWeather.js"></script>
+			<script src="assets/js/uiWeather.js"></script>
+			<script src="assets/js/appWeather.js"></script>
+
 	</body>
 </html>
