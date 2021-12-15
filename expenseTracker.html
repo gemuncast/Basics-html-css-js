@@ -75,26 +75,33 @@
                 <div class="inner">
                     <section>
                         <h2>Expense Tracker Demo - IN PROGRESS</h2>
-                        <!-- <div>
-                            <h3>Add a Task</h3>
+                        <div>
+                            <h3>Add a Expense</h3>
                             <form method="post" action="#">
                                 <div class="row gtr-uniform">
                                     <div class="col-6 col-12-xsmall">
-                                        <input type="text" name="add task" id="newTask" value=""
-                                            placeholder="Type Your Task Here" />
+                                        <input type="text" name="add Expense" id="newExpense" value=""
+                                            placeholder="Type Your Expense Name Here" />
+                                    </div>
+                                    <div class="col-6 col-12-xsmall">
+                                        <input type="text" name="add Expense amount" id="newAmount" value=""
+                                            placeholder="Type the amount Here" />
                                     </div>
                                     <div class="col-12">
                                         <ul class="actions">
-                                            <li><a id="addTask" class="button small">Add</a></li>
+                                            <li><a id="addExpense" class="button small">Add</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </form>
-                        </div> -->
+                        </div>
                     </section>
                     <section>
-                        <ol id="trackDisplay">
+                        <ol id="totalDisplay">
                         </ol>
+                        <div>
+                            <p>total = <span id='totalExp'>0</span> </p>
+                        </div>
                     </section>
                 </div>
 
